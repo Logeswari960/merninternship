@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
+
+    <h2>Login Page</h2>
+
+    <input type="text" id="username" placeholder="Enter Username"
+           style="padding:8px; width:200px;"><br><br>
+
+    <input type="password" id="password" placeholder="Enter Password"
+           style="padding:8px; width:200px;"><br><br>
+
+    <button onclick="login()" style="padding:10px 20px; font-size:16px;">Submit</button>
+
+    <script>
+        function login() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if(user === "" || pass === ""){
+                alert("Please enter username and password");
+            } else {
+                window.location.href = "details.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

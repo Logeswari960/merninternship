@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .form-box {
+            background: white;
+            padding: 35px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 95%;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border: 1px solid gray;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #520da1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+        <h2>Enter Your Details</h2>
+
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="dept" placeholder="Department">
+        <input type="text" id="clg" placeholder="College Name">
+
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            let n = document.getElementById("name").value;
+            let d = document.getElementById("dept").value;
+            let c = document.getElementById("clg").value;
+
+            if (n === "" || d === "" || c === "") {
+                alert("Please fill all details!");
+            } else {
+                alert("Details submitted successfully!");
+            }
+        }
+    </script>
+
+</body>
+</html>
